@@ -1,9 +1,11 @@
-#include "ShaderReflector.h"
-
 #include <wrl\client.h>
 #include <d3dcompiler.h>
 #include <string>
+#include <cctype>
+
 #include "InputOutputStream.h"
+#include "ShaderReflector.h"
+
 
 static bool icompare_pred(unsigned char a, unsigned char b)
 {

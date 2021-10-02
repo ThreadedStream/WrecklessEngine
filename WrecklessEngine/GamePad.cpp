@@ -1,7 +1,11 @@
-#include "Gamepad.h"
 #include <cassert>
 #include <cmath>
 #include <iostream>
+#include <algorithm>
+
+#include "Gamepad.h"
+
+
 
 namespace Input
 {
@@ -17,7 +21,7 @@ namespace Input
 			return (m_State.Gamepad.wButtons & (int)btn) != 0;
 		return false;
 	}
-
+	
 	void GamePad::UpdateState()
 	{
 		
