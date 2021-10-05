@@ -292,6 +292,7 @@ namespace Dynamic
 			friend ConstElementRef;
 		public:
 			// conversion for getting read-only pointer to supported SysType
+			// conversion for getting read-only pointer to supported SysType
 			template<typename T>
 			operator const T* () const noxnd
 			{
@@ -374,7 +375,7 @@ namespace Dynamic
 		template<typename T>
 		operator T& () const noxnd
 		{
-			static_assert(ReverseMap<std::remove_const_t<T>>::valid, "Unsupported SysType used in conversion");
+		    static_assert(ReverseMap<std::remove_const_t<T>>::valid, "Unsupported SysType used in conversion");
 			return *reinterpret_cast<T*>(pBytes + offset + pLayout->Resolve<T>());
 		}
 		// assignment for writing to as a supported SysType
@@ -391,8 +392,6 @@ namespace Dynamic
 		const LayoutElement* pLayout;
 		char* pBytes;
 	};
-
-
 
 
 	// The buffer object is a combination of a raw byte buffer with a LayoutElement

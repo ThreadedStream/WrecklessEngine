@@ -277,10 +277,6 @@ namespace Dynamic
 		return (*pRoot)[key];
 	}
 
-
-
-
-
 	bool ConstElementRef::Exists() const noexcept
 	{
 		return pLayout->Exists();
@@ -337,9 +333,6 @@ namespace Dynamic
 	{}
 	ElementRef::Ptr::Ptr(ElementRef* ref) noexcept : ref(ref)
 	{}
-
-
-
 
 	Buffer::Buffer(RawLayout&& lay) noxnd
 		:

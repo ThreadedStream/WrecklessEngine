@@ -1,4 +1,5 @@
 // Copy-pasted from ChiliTomatoNoodle
 
 #pragma once
-#define noxnd noexcept(!IS_DEBUG)
+
+#define noxnd noexcept(!_DEBUG)
